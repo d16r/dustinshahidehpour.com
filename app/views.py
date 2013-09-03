@@ -6,7 +6,7 @@ POST_DIR = 'posts'
 
 @app.route("/")
 def index():
-	return "Hello World!"
+	return render_template('index.html')
 
 @app.route("/posts")
 def posts():
