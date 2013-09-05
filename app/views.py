@@ -9,13 +9,13 @@ def index():
 	return "Hello World"
 
 
-@app.route("/posts/")
+@app.route("/blog/")
 def posts():
 	posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
 	posts.sort(key=lambda item:item['date'], reverse=False)
 	return render_template('posts.html', posts=posts)
 
-@app.route('/posts/<name>/')
+@app.route('/blog/<name>/')
 def post(name):
 	path = '{}/{}'.format(POST_DIR, name)
 	post = flatpages.get_or_404(path)
