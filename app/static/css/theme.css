@@ -1,3 +1,13 @@
+body {
+    background-image: url('../img/background.png');
+    background-repeat: repeat;
+}
+
+.container {
+    background: white;
+    box-shadow: 0 4px 7px rgba(100, 100, 100, 0.3);
+}
+
 .tag {
     color:white;
     text-decoration: none;
