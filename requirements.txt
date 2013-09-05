@@ -7,6 +7,6 @@ MarkupSafe==0.18
 PyYAML==3.10
 Pygments==1.6
 Unipath==1.0
-Werkzeug==0.9.3
-itsdangerous==0.22
+Werkzeug==0.9.4
+itsdangerous==0.23
 wsgiref==0.1.2

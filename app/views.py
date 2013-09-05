@@ -9,6 +9,11 @@ def index():
 	return "Hello World"
 
 
+@app.route("/tag/<string:tag>/")
+def tag(tag):
+	posts = [p for p in flatpages if tag in p.meta.get('tags', [])]
+	return render_template('tag.html', pages=posts, tag=tag)
+
 @app.route("/blog/")
 def posts():
 	posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
