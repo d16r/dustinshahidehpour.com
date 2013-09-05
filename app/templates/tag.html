@@ -1,18 +1,20 @@
-{% extends "base.html" %}
-  {% block content %}
+{% extends "layouts/_base.html" %}
+{% block content %}
     <ul>
-	    {% for page in pages %}
-	      <li>
-	      <a href="{{ url_for("post", name=page.path.replace('posts/', '')) }}">{{page.meta.title}}</a>
-		    {% if page.meta.tags|length %}
-				  | Tagged:
-				  {% for page_tag in page.meta.tags %}
-				    <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
-			    {% endfor %}
-		    {% endif %}
-	    </li>
-	    {% else %}
-	      <li>No page.</li>
-	    {% endfor %}
+        {% for page in pages %}
+            <li>
+                <a href="{{ url_for("post", name=page.path.replace('posts/', '')) }}">{{page.meta.title}}</a>
+                {% if page.meta.tags|length %}
+                    | Tagged:
+                    {% for page_tag in page.meta.tags %}
+                        <span class="label label-success">
+                            <a class="tag" href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+                        </span>&nbsp;
+                    {% endfor %}
+                {% endif %}
+            </li>
+        {% else %}
+          <li>No page.</li>
+        {% endfor %}
     </ul>
-  {% endblock %}
+{% endblock %}

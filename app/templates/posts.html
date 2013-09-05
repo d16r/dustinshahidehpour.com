@@ -1,7 +1,10 @@
-{% extends "base.html" %}
-  {% block content %}
+{% extends "layouts/_base.html" %}
+
+{% block content %}
+    <h1>Blog</h1>
+
     {% for post in posts %}
-      <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
-			<small>{{ post.date }}</small>
-		{% endfor %}
-	{% endblock %}
+        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
+        <small>{{ post.date }}</small><br>
+   {% endfor %}
+{% endblock %}

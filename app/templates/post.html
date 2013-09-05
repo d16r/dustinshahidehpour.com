@@ -1,8 +1,19 @@
-{% extends "base.html" %}
+{% extends "layouts/_base.html" %}
   {% block content %}
+
+    <h1>{{post.title}}</h1>
+    <h3><i>{{post.date}}<i/></h3>
     {{ post.html|safe }}
-    {{ post.title }}
-    {{ post.date }}
+
+    <div>
+        Tags:
+        {% for tag in post.meta.tags %}  
+        <span class="label label-success">
+            <a class="tag" href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a>
+        </span>&nbsp;
+        {% endfor %}
+        <br>
+    </div>
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">
