@@ -1,7 +1,7 @@
 import sys
 from flask import render_template
 from flask_flatpages import pygments_style_defs
-from app import app, flatpages
+from app import app, flatpages, freezer
 
 POST_DIR = app.config['POST_DIR']
 @app.route("/")
@@ -19,6 +19,17 @@ def tag(tag):
 	"""
 	posts = [p for p in flatpages if tag in p.meta.get('tags', [])]
 	return render_template('tag.html', pages=posts, tag=tag)
+
+@freezer.register_generator
+def tag():
+  """
+	This generator will generator all the static pages 
+	needed for the any /tag/ Urls
+	"""
+	all_tags = [p.meta.get('tags',[]) for p in flatpages]
+	unique_tags = set(sum(all_tags, []))
+	for tag in unique_tags:
+		yield 'tag', {'tag': tag}
 
 @app.route("/blog/")
 def posts():

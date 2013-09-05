@@ -6,6 +6,7 @@ build/*
 *.so
 
 # Packages
+*.DS_STORE
 *.egg
 *.egg-info
 dist
