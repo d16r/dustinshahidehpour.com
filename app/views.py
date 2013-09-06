@@ -42,7 +42,7 @@ def posts():
       else:
         tag_count[tag] += 1
 
-    return render_template('posts.html', posts=posts[:10], tags=sorted(tag_count), tag_count=tag_count)
+    return render_template('posts.html', posts=posts, tags=sorted(tag_count), tag_count=tag_count)
 
 @app.route('/blog/<name>/')
 def post(name):
