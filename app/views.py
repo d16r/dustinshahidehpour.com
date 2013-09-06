@@ -12,7 +12,7 @@ def index():
 	"""
 	This method returns the main page of the site.
 	"""
-	return "Hello World"
+	return render_template('index.html')
 
 @app.route("/tag/<string:tag>/")
 def tag(tag):
