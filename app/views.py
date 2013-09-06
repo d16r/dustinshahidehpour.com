@@ -32,7 +32,17 @@ def posts():
     """
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
     posts.sort(key=lambda item:item['date'], reverse=False)
-    return render_template('posts.html', posts=posts)
+
+    #Get the tag count from all posts.
+    tags = sum([p.meta.get('tags', []) for p in flatpages], [])
+    tag_count = {}
+    for tag in tags:
+      if tag_count.get(tag) is None:
+        tag_count[tag] = 1
+      else:
+        tag_count[tag] += 1
+
+    return render_template('posts.html', posts=posts[:10], tags=sorted(tag_count), tag_count=tag_count)
 
 @app.route('/blog/<name>/')
 def post(name):

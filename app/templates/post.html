@@ -2,6 +2,7 @@
 
 {% block content %}
     <div class="container">
+        <br><br>
         <h1>{{post.title}}</h1>
         <h4 class="grey">{{post.date}}&nbsp;/&nbsp;<a href="/">Home</a></h4>
         {{ post.html|safe }}
@@ -9,9 +10,7 @@
         <div>
             Tags:
             {% for tag in post.meta.tags %}  
-                <span class="label label-success">
-                    <a class="tag" href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a>
-                </span>&nbsp;
+                <a class="tag" href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a>&nbsp;
             {% endfor %}
             <br>
         </div>
