@@ -59,7 +59,7 @@ def page_not_found(e):
 
 
 ########################################
-######  Flask-Frozen Generators   ######
+######  Flask-Frozen Methods    ########
 ########################################
 
 @freezer.register_generator
