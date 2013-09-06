@@ -6,7 +6,6 @@
             <p class="grey">My name is Dustin Shahidehpour.<br>
                 I am a Software Engineer from Chicago, IL.<br>
             </p>
-
             <br>
             <div class="contact-icons">
                 <a href="https://www.facebook.com/dustin.shahidehpour"><i class="icon-facebook icon-2x"></i></a>&nbsp;&nbsp;&nbsp;
@@ -15,12 +14,12 @@
                 <a href="mailto:dshahidehpour@gmail.com"><i class="icon-envelope icon-2x"></i></a>
             </div>
         </div>
-        <div class="col-md-5 ">
+        <div class="col-md-6">
             <h1>Blog</h1>
             {% for post in posts %}
                 <div class="post">
-                <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
-                <span class="dark-grey"><i>{{ post.date }}</i></span>
+                    <span class="dark-grey">{{ post.date }}</span>>>
+                    <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
                 </div>
             {% endfor %}
         </div>
