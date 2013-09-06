@@ -3,7 +3,7 @@
 {% block content %}
     <div class="container">
         <h1>{{post.title}}</h1>
-        <h3><i>{{post.date}}<i/>&nbsp;/&nbsp;<a href="/">Home</a></h3>
+        <h4 class="grey">{{post.date}}&nbsp;/&nbsp;<a href="/">Home</a></h4>
         {{ post.html|safe }}
 
         <div>
@@ -15,8 +15,8 @@
             {% endfor %}
             <br>
         </div>
-
-        <div id="disqus_thread"></div>
+        <br>
+        <div align="middle" class="col-md-8" id="disqus_thread"></div>
         <script type="text/javascript">
             var disqus_shortname = 'dustinshahidehpour'; 
             /* * * DON'T EDIT BELOW THIS LINE * * */
