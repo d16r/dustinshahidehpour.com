@@ -1,3 +1,8 @@
+.contact {
+    font-size: 19px;
+    text-align: center;
+}
+
 .container {
     font-family: 'Droid Sans', sans-serif;
 }
@@ -26,4 +31,24 @@
 
 .post {
     margin: 1px;
+}
+
+.facebook a {
+    color: rgb(59,89,152);
+}
+
+.github a {
+    color: rgb(74, 83, 91);
+}
+
+.linkedin a {
+    color: rgb(0, 123, 182);
+}
+
+.email a {
+    color: rgb(213, 51, 93);
+}
+
+.pgp a {
+    color: rgb(153, 51, 51);
 }
