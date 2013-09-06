@@ -1,0 +1,26 @@
+{% extends "layouts/_base.html" %}
+{% block content %}
+    <div class="container middle">
+        <div class="col-md-4 col-md-offset-1">
+            <h1>Hello</h1>
+            <p id="about">My name is Dustin Shahidehpour.<br>I am a Software Engineer from Chicago, IL.</p>
+
+            <br>
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/dustin.shahidehpour"><i class="icon-facebook icon-2x"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://github.com/dshahidehpour"><i class="icon-github icon-2x"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="http://www.linkedin.com/pub/dustin-shahidehpour/3b/7a5/a08"><i class="icon-linkedin icon-2x"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="mailto:dshahidehpour@gmail.com"><i class="icon-envelope icon-2x"></i></a>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-offset-1">
+            <h1>Blog</h1>
+            {% for post in posts %}
+                <div class="post">
+                <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
+                <i>{{ post.date }}</i>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
