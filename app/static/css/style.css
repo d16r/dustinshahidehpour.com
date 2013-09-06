@@ -1,12 +1,24 @@
-body {
-    background-color: red;
+.container {
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.grey {
+    color: rgb(104,104,104);
 }
 
 .middle {
-    margin-top: 10%;
+    margin-top: 13%;
     padding-bottom: 5px;
 }
 
 .post {
     margin: 1px;
+}
+
+.post > a, .contact-icons > a {
+    color: rgb(83,174,202);
+}
+
+.post > a:hover, .contact-icons > a:hover {
+    text-decoration: none;
 }
