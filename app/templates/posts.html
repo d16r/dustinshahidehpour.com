@@ -13,7 +13,7 @@
         <div class="col-md-4">
             <h1>Tags</h1>
             {% for tag in tags %}
-            <a class="tag" href="/tag/{{tag}}">{{tag}}</a>&nbsp;{{ tag_count[tag] }}<br>
+            <a class="tag" href="/tag/{{tag}}">{{tag}}</a>&nbsp;&nbsp;&nbsp;<span class="badge">{{ tag_count[tag] }}</span><br>
             {% endfor %}
            
         </div>

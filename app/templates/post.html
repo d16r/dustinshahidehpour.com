@@ -4,11 +4,11 @@
     <div class="container">
         <br><br>
         <h1>{{post.title}}</h1>
-        <h4 class="grey">{{post.date}}&nbsp;/&nbsp;<a href="/">Home</a>&nbsp;/&nbsp;<a href="/blog">Blog</a></h4>
+        <h4 class="grey">{{post.date}}&nbsp;|&nbsp;<a href="/">Home</a>&nbsp;|&nbsp;<a href="/blog">Blog</a></h4>
         {{ post.html|safe }}
 
         <div>
-            Tags:
+            <strong>Tags:</strong>
             {% for tag in post.meta.tags %}  
                 <a class="tag" href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a>&nbsp;
             {% endfor %}
