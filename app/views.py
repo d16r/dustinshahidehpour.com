@@ -53,6 +53,10 @@ def post(name):
     post = flatpages.get_or_404(path)
     return render_template('post.html', post=post)
 
+@app.errorhandler(404)
+def page_not_found(e):
+  return render_template('404.html'), 404
+
 
 ########################################
 ######  Flask-Frozen Generators   ######
