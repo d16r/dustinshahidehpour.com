@@ -33,6 +33,10 @@
     margin: 1px;
 }
 
+.tag {
+    font-size: 16px;
+}
+
 .facebook a {
     color: rgb(59,89,152);
 }
