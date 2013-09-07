@@ -20,7 +20,7 @@
                 <h1>Blog</h1>
                 {% for post in posts %}
                     <div class="post">
-                        <span class="dark-grey">{{ post.date }}</span> >>
+                        <span class="grey">{{ post.date }} >> </span>
                         <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
                     </div>
                 {% endfor %}
