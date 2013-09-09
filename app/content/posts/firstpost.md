@@ -21,7 +21,7 @@ James Harding has an excellent post describing how to get a Flask site up and ru
 Now, one thing I want to point out about that tutorial is that, everything is contained in 1 file. ***Say something about how to format them into several files.***
 
     def sample():
-      print 'this is a test'
+        print 'this is a test'
 
 ##Uploading Content
 
