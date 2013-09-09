@@ -8,13 +8,6 @@
                     I am a Software Engineer from Chicago, IL.<br><br>
                     If I am not coding, you can find me training for long-distance
                     runs, or trying to find a good book to read.
-                                <!--div class="contact-icons">
-                    <a href="https://www.facebook.com/dustin.shahidehpour"><i class="icon-facebook icon-2x"></i></a>&nbsp;&nbsp;&nbsp;
-                    <a href="https://github.com/dshahidehpour"><i class="icon-github icon-2x"></i></a>&nbsp;&nbsp;&nbsp;
-                    <a href="http://www.linkedin.com/pub/dustin-shahidehpour/3b/7a5/a08"><i class="icon-linkedin icon-2x"></i></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="mailto:dshahidehpour@gmail.com"><i class="icon-envelope icon-2x"></i></a>
-                </div-->
             </div>
             <div class="col-md-6">
                 <h1>Blog</h1>
@@ -24,6 +17,7 @@
                         <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
                     </div>
                 {% endfor %}
+                <a href="/blog">More...</a>
             </div>
         </div>
         <br><br><br>

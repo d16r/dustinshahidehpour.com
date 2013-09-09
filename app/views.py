@@ -14,7 +14,7 @@ def index():
     """
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
     posts.sort(key=lambda item:item['date'], reverse=True)
-    return render_template('index.html', posts=posts[:5])
+    return render_template('index.html', posts=posts[:4])
 
 @app.route("/tag/<string:tag>/")
 def tag(tag):
@@ -31,7 +31,7 @@ def posts():
     This method returns a page with a list of every post.
     """
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
-    posts.sort(key=lambda item:item['date'], reverse=False)
+    posts.sort(key=lambda item:item['date'], reverse=True)
 
     #Get the tag count from all posts.
     tags = sum([p.meta.get('tags', []) for p in flatpages], [])
