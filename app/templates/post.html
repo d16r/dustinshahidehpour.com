@@ -1,32 +1,27 @@
 {% extends "layouts/_base.html" %}
 {% block content %}
-    <div class="container">
-        <div class="col-md-8 col-md-offset-2">
-            <br><br>
-            <h1>{{post.title}}</h1>
-            <h5 class="grey">{{post.date}}&nbsp;|&nbsp;<a href="/">Home</a>&nbsp;|&nbsp;<a href="/blog">Blog</a></h5>
-            <br>
-            {{ post.html|safe }}
-            <div>
-                <strong>Tags:</strong>
-                {% for tag in post.meta.tags %}  
-                    <a class="tag" href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a>&nbsp;
-                {% endfor %}
-                <br>
-            </div>
-            <br><br>
-            <div align="middle" id="disqus_thread"></div>
-            <script type="text/javascript">
-                var disqus_shortname = 'dustinshahidehpour'; 
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-        </div>
+    <h1>{{post.title}}</h1>
+    <h5 class="grey">{{post.date}}</h5>
+    <br>
+    {{ post.html|safe }}
+    <div>
+        <strong>Tags:</strong>
+        {% for tag in post.meta.tags %}  
+            <a class="tag" href="{{ url_for("tag", tag=tag) }}">{{ tag }}</a>&nbsp;
+        {% endfor %}
+        <br>
     </div>
+    <br><br>
+    <div align="middle" id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'dustinshahidehpour'; 
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 {% endblock %}
