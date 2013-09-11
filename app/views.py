@@ -1,5 +1,4 @@
 from flask import render_template
-from flask_flatpages import pygments_style_defs
 from app import app, flatpages, freezer
 
 POST_DIR = app.config['POST_DIR']

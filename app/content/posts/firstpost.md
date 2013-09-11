@@ -8,7 +8,7 @@ Clean and Simple.
 
 When I decided it was time build my own webpage, I wanted the code, the UI, the blog, everything, to be clean and simple. 
 
-This tutorial bridges the gap between many excellent tutorials that I referenced as I continued to develop this website.
+This post documents that steps it took to build this site, and offers a explanation of how you can do it yourself.
 
 ##Building the Backend
 
@@ -18,10 +18,25 @@ In the spirit of the [DRY Principle](http://en.wikipedia.org/wiki/Don't_repeat_y
 
 James Harding has an excellent post describing how to get a Flask site up and running use Flask-FlatPages and Flask-Frozen. [Check it out.](http://www.jamesharding.ca/posts/simple-static-markdown-blog-in-flask/)
 
-Now, one thing I want to point out about that tutorial is that, everything is contained in 1 file. ***Say something about how to format them into several files.***
+Now, one thing I want to point out about that tutorial is that, everything is contained in 1 file. 
 
-    def sample():
-        print 'this is a test'
+##Project Organization
+    ├── README.md
+    ├── requirements.txt
+    ├── config.py
+    ├── run.py
+    └── app
+        ├── __init__.py
+        ├── views.py
+        └── build
+            ├── ...
+        └── content
+            ├── ...
+        └── static
+            ├── ...
+        └── templates
+            ├── ...
+
 
 ##Uploading Content
 
