@@ -4,27 +4,24 @@
     margin: 8px 8px 20px 8px;
 }
 
-.box {
-    background-color: #FF981D;
-    min-height: 60px;
-    margin: 8px;
-}
-
-.box > a {
-    display: block;
-    height: 60px;
-    width: 100%;
-}
-
-.box > a:hover {
+.box{
     background-color: rgb(81,81,81);
+    height: 60px;
+    margin: 8px;
+    display: block;
+    padding-top: 19px;
+    padding-left: 5%;
+    font-size: 20px;
+    color: white;
+}
+
+.box:hover {
+    background-color: rgb(255,153,0);
     color: white;
     transition: background-color .7s ease;
     -o-transition: background-color .7s ease;
     -webkit-transition: background-color .7s ease;
     -moz-transition: background-color .7s ease;
-    -webkit-transform: background-color .7s ease;
-    transform: background-color .7s ease;
 }
 
 .container {
@@ -35,8 +32,8 @@
     text-decoration: none;
 }
 
-.container a {
-    color: rgb(0,180,255);
+.content { 
+    text-align: center;
 }
 
 .grey {
@@ -48,6 +45,7 @@
     padding-bottom: 5px;
 }
 
-.post {
-    margin: 1px;
+#selected {
+    color:white;
+    background-color: rgb(255,153,0); 
 }

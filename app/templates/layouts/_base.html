@@ -13,6 +13,8 @@
         <link rel="stylesheet" media="screen" href="/static/css/style.css">
 
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        {% block head %}
+        {% endblock %}
 
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
         <title>Dustin Shahidehpour</title>
@@ -23,9 +25,11 @@
       <div class="container middle">
         <div class="col-md-4">
             <div class="big-box"></div>
-            <div class="box"><a href="/">About</a></div>
-            <div class="box"><a href="/blog">Blog</a></div>
-            <div class="box"><a href="/contact">Contact</a></div>
+            <div>
+              <a class="box" data-target="about" href="/">About</a>
+              <a class="box" data-target="blog" href="/blog">Blog</a>
+              <a class="box" data-target="contact" href="/contact">Contact</a>
+            </div>
         </div>
         <div class="col-md-7">
           {% block content %}
@@ -45,6 +49,11 @@
 
         ga('create', 'UA-43766259-1', 'dustinshahidehpour.com');
         ga('send', 'pageview');
+      </script>
+      <script>
+        $(document).ready(function(){
+          $(".box[data-target='{{name}}']").attr('id', 'selected');
+        })
       </script>
   </body>
 </html>
