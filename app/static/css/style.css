@@ -24,16 +24,24 @@
     -moz-transition: background-color .7s ease;
 }
 
+.contact {
+    color: rgb(0,180,255);
+}
+
+.contact:hover{
+    color: orange;
+    transition: color .7s ease;
+    -o-transition: color .7s ease;
+    -webkit-transition: color .7s ease;
+    -moz-transition: color .7s ease;
+}
+
 .container {
     font-family: 'Droid Sans', sans-serif;
 }
 
 .container a:hover {
     text-decoration: none;
-}
-
-.content { 
-    text-align: center;
 }
 
 .grey {
