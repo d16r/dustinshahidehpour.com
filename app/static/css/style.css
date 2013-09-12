@@ -29,7 +29,7 @@
 }
 
 .contact:hover{
-    color: orange;
+    color: rgb(81,81,81);
     transition: color .7s ease;
     -o-transition: color .7s ease;
     -webkit-transition: color .7s ease;
