@@ -1,33 +1,11 @@
-.big-box { 
-    background-color: rgb(0,180,255);
-    min-height: 175px;
-    margin: 8px 8px 20px 8px;
-}
-
-.box{
-    font-family: 'Titillium Web', sans-serif;
-    letter-spacing: 1px;
-    background-color: rgb(81,81,81);
-    height: 60px;
-    margin: 8px;
-    display: block;
-    padding-top: 19px;
-    padding-left: 5%;
-    font-size: 20px;
-    color: white;
-}
-
-.box:hover {
-    background-color: rgb(0,180,255);
-    color: white;
-    transition: background-color .7s ease;
-    -o-transition: background-color .7s ease;
-    -webkit-transition: background-color .7s ease;
-    -moz-transition: background-color .7s ease;
+#banner {
+    min-height: 30px;
+    width: 100%;
+    background-color: rgb(17,71,88);
 }
 
 .contact {
-    color: rgb(0,180,255);
+    color: rgb(17,71,88);
 }
 
 .contact:hover{
@@ -39,22 +17,19 @@
 
 .container {
     font-family: 'Droid Sans', sans-serif;
+    margin: 0 auto;
 }
 
 .container a {
-    color: rgb(0,180,255);
+    color: rgb(17,71,88);;
 }
 
 .container a:hover {
     text-decoration: none;
 }
 
-.grey {
-    color: rgb(104,104,104);
-}
-
 .middle {
-    margin-top: 8%;
+    margin-top: 3%;
     padding-bottom: 5px;
 }
 
