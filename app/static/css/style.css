@@ -1,7 +1,16 @@
-#banner {
-    min-height: 30px;
-    width: 100%;
-    background-color: rgb(17,71,88);
+body{
+    background-color: #e7e7e8;
+}
+
+.banner {
+    margin-left:-15px;
+    margin-right: -15px;
+    min-height: 80px;
+    background-color: #f7f7f7;
+}
+
+.centered {
+    margin: 0 auto;
 }
 
 .contact {
@@ -16,24 +25,20 @@
 }
 
 .container {
+    background-color:white;
+    margin-top: 5%;
     font-family: 'Droid Sans', sans-serif;
     margin: 0 auto;
 }
 
-.container a {
-    color: rgb(17,71,88);;
-}
-
-.container a:hover {
-    text-decoration: none;
-}
-
 .middle {
-    margin-top: 3%;
+    margin-top: 5%;
     padding-bottom: 5px;
 }
 
-#selected {
-    color:white;
-    background-color: rgb(0,180,255); 
+nav {
+    height: 80px;
+}
+.picture {
+    margin-top:3%;
 }
