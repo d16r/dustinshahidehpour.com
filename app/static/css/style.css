@@ -5,32 +5,34 @@ body{
 .banner {
     margin-left:-15px;
     margin-right: -15px;
-    min-height: 80px;
-    background-color: rgb(17,71,88);
+    min-height: 60px;
+    background-color: rgb(0,141,187);
 }
 
-.banner-text { 
+.banner-text {
+    font-family: 'Open Sans' sans-serif;
+    font-weight: 300;
     padding-left: 30px;
-    padding-top: 25px;
+    padding-top: 13px;
     font-size: 25px; 
     color:white;
  }
 
-.center {
+.nav-center {
+    font-family: 'Open Sans' sans-serif;
+    font-weight: 300;
     text-align: center;
 }
 
 .contact {
     width: 40px;
-    color: rgb(17,71,88);
-    padding-right: 25px;
+    color: rgb(119,119,119);
+    padding-right: 8%;
 }
 
-.contact:hover{
+.contact:hover {
+    color: rgb(73,73,73);
     text-decoration: none;
-}
-
-.contact:hover{
     transition: color .7s ease;
     -o-transition: color .7s ease;
     -webkit-transition: color .7s ease;
@@ -45,6 +47,20 @@ body{
     margin: 0 auto;
 }
 
+.content a {
+    color: rgb(0,141,187);
+    text-decoration: none;
+}
+
+.content a:hover {
+    color: red;
+    transition: color 1s ease;
+    -o-transition: color 1s ease;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    text-decoration: none;
+}
+
 h1,h2,h3,h4,h5,h6 { 
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -57,7 +73,7 @@ nav {
 }
 
 nav > span {
-    font-size: 17px;
+    font-size: 19px;
 }
 
 nav > span > a {
@@ -65,6 +81,7 @@ nav > span > a {
 }
 
 nav > span > a:hover{
+    color:red;
     transition: color 1s ease;
     -o-transition: color 1s ease;
     -webkit-transition: color 1s ease;

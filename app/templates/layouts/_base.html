@@ -24,16 +24,18 @@
           <header>
             <nav>
               <span class="col-md-3"><a href="/">Dustin Shahidehpour</a></span>
-              <span class="col-md-1 col-md-offset-6 center"><a href="/blog">Blog</a></span>
-              <span class="col-md-1 center"><a href="/projects">Projects</a></span>
-              <span class="col-md-1 center"><a href="/contact">Contact</a></span>
+              <span class="col-md-1 col-md-offset-6 nav-center"><a href="/blog">Blog</a></span>
+              <span class="col-md-1 nav-center"><a href="/projects">Projects</a></span>
+              <span class="col-md-1 nav-center"><a href="/contact">Contact</a></span>
             </nav>
           </header>
           <div class="banner">
             <span class="col-md-2 banner-text">{{ name }}</span>
           </div>
-          {% block content %}
-          {% endblock %}
+          <div class="content">
+            {% block content %}
+            {% endblock %}
+          </div>
       </div>
       <!-- jQuery  -->
       <script src="//code.jquery.com/jquery.js"></script>
