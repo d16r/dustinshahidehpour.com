@@ -13,7 +13,7 @@ def index():
     """
     This method returns the main page of the site.
     """
-    return render_template('index.html', name='about')
+    return render_template('index.html', name='About')
 
 
 @app.route("/tag/<string:tag>/")
@@ -45,7 +45,7 @@ def posts():
 
     return render_template('posts.html',
                            posts=posts, tags=sorted(tag_count),
-                           tag_count=tag_count, name='blog')
+                           tag_count=tag_count, name='Blog')
 
 
 @app.route('/blog/<name>/')
@@ -55,7 +55,7 @@ def post(name):
     """
     path = '{}/{}'.format(POST_DIR, name)
     post = flatpages.get_or_404(path)
-    return render_template('post.html', post=post, name='blog')
+    return render_template('post.html', post=post, name='Blog')
 
 
 @app.route('/contact/')
@@ -63,7 +63,7 @@ def contact():
     """
     This method returns all the user's contact information.
     """
-    return render_template('contact.html', name='contact')
+    return render_template('contact.html', name='Contact')
 
 
 @app.errorhandler(404)
