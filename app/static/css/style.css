@@ -92,3 +92,9 @@ nav > span > a:hover{
 .picture { 
     margin: 3%;
 }
+
+.post-title {
+    font-family: 'Opens Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
