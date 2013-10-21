@@ -47,6 +47,10 @@ body{
     margin: 0 auto;
 }
 
+.content {
+    margin: 2%;
+}
+
 .content a {
     color: rgb(0,141,187);
     text-decoration: none;
@@ -93,8 +97,17 @@ nav > span > a:hover{
     margin: 3%;
 }
 
+.post {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    max-width: 75%;
+}
+
+.post a {
+    color: rgb(73,73,73);
+}
+
 .post-title {
-    font-family: 'Opens Sans', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
     font-weight: 300;
     font-size: 20px;
 }

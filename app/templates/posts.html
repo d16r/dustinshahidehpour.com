@@ -4,16 +4,17 @@
         <div class="col-md-9">
             <h1>Posts</h1>
             {% for post in posts %}
+                <br>
                 <div class="post"> 
-                    <a class="post-title" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a> 
+                    <a class="post-title" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
                     <span class="dark-grey">{{ post.date }}</span>
                 </div>
             {% endfor %}
         </div>
         <div class="col-md-2">
-            <h1>Tags</h1>
+            <h1>Tags</h1><br>
             {% for tag in tags %}
-            <a class="tag" href="/tag/{{tag}}">{{tag}}</a>&nbsp;&nbsp;&nbsp;<span class="badge">{{ tag_count[tag] }}</span><br>
+            <a class="tag" href="/tag/{{tag}}">{{tag|capitalize}}</a>&nbsp;&nbsp;&nbsp;<span class="badge">{{ tag_count[tag] }}</span><br>
             {% endfor %}
         </div>
     </div><br><br>
