@@ -13,7 +13,7 @@ def index():
     """
     This method returns the main page of the site.
     """
-    return render_template('index.html', name='About')
+    return render_template('index.html', name='Home')
 
 
 @app.route("/tag/<string:tag>/")
@@ -56,6 +56,14 @@ def post(name):
     path = '{}/{}'.format(POST_DIR, name)
     post = flatpages.get_or_404(path)
     return render_template('post.html', post=post, name='Blog')
+
+
+@app.route('/projects/')
+def projects():
+    """
+    This methods returns a page containing all my projects.
+    """
+    return render_template('projects.html', name="Projects")
 
 
 @app.route('/contact/')
