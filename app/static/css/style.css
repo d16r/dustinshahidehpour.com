@@ -22,12 +22,6 @@ body{
     color: rgb(121,121,121);
  }
 
-.nav-center {
-    font-family: 'Open Sans' sans-serif;
-    font-weight: 300;
-    text-align: center;
-}
-
 .contact {
     width: 40px;
     color: rgb(119,119,119);
@@ -41,6 +35,10 @@ body{
     -o-transition: color .7s ease;
     -webkit-transition: color .7s ease;
     -moz-transition: color .7s ease;
+}
+
+.contact-compact {
+    padding-right: 3%;
 }
 
 .container {
@@ -75,6 +73,12 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 300;
 }
 
+.name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
 nav {
     font-family: 'Droid Sans', sans-serif;
     padding-top: 25px;
@@ -97,6 +101,13 @@ nav > span > a:hover{
     -moz-transition: color 1s ease;
     text-decoration: none;
 }
+
+.nav-center {
+    font-family: 'Open Sans' sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
 
 .picture { 
     margin: 3%;
