@@ -49,6 +49,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     margin: 0 auto;
+    box-shadow: 0 0 5px rgb(136, 136, 136);
 }
 
 .content {
@@ -106,12 +107,12 @@ nav > span > a:hover{
     max-width: 75%;
 }
 
-.post a {
-    color: rgb(73,73,73);
-}
-
 .post-title {
     font-family: 'Droid Sans', sans-serif;
     font-weight: 300;
     font-size: 24px;
+}
+
+.tag { 
+    font-size: 20px;
 }

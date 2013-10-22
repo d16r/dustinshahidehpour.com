@@ -23,7 +23,7 @@ def tag(tag):
     and renders a new page with all of them listed.
     """
     posts = [p for p in flatpages if tag in p.meta.get('tags', [])]
-    return render_template('tag.html', pages=posts, tag=tag)
+    return render_template('tag.html', pages=posts, tag=tag, name='Tag')
 
 
 @app.route("/blog/")

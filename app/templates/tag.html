@@ -1,16 +1,19 @@
 {% extends "layouts/_base.html" %}
 {% block content %}
-    <div class="container middle">
-        <div class="col-md-6 col-md-offset-3">
-        <h1>{{ tag }}</h1>
-        {% for page in pages %}
-            <div class="post">
-            <a href="{{ url_for("post", name=page.path.replace('posts/', '')) }}">{{page.meta.title}}</a>
-            <span class="dark-grey"><i>{{ page.meta.date }}</i></span>
-            </div>
-        {% else %}
-            <p class="grey">I haven't used this tag...yet.</p>
-        {% endfor %}
+    <div class="row">
+        <div class="col-md-8">
+            <h1>{{ tag }}</h1>
+            {% for page in pages %}
+                <br>
+                <div class="post">
+                    <a class="post-title" href="{{ url_for("post", name=page.path.replace('posts/', '')) }}">{{page.meta.title}}</a><br>
+                    <span class="dark-grey">Published on: {{ page.meta.date }}</span><br><br>
+                    <p>{{ page.body[50:250]|safe }}...</p>
+                </div>
+            {% else %}
+                <p class="grey">No posts with this tag..yet.</p>
+            {% endfor %}
+            <br><br>
         </div>
     </div>
 {% endblock %}
