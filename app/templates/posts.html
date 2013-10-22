@@ -7,7 +7,7 @@
                 <br>
                 <section class="post"> 
                     <a class="post-title" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a><br>
-                    <span class="dark-grey">Published on: {{ post.date }}</span><br><br>
+                    <span class="white">Published on: {{ post.date }}</span><br><br>
                     <p>{{ post.body[50:250]|safe }}...</p>
                 </section>
             {% endfor %}
