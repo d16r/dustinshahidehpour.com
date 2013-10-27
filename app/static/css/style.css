@@ -53,15 +53,15 @@ p{
     text-decoration: none;
 }
 
-.white {
-    color: white;
-}
 
-
-h1,h2,h3,h4,h5,h6 { 
+h1,h2,h3,h4,h5,h6, strong { 
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+}
+
+li, .white {
+    color:white;
 }
 
 .name {
