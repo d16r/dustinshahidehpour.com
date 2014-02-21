@@ -1,5 +1,9 @@
-.container {
-    background-color: #333;
+footer {
+    background-color: rgb(165,218,252);
+}
+
+img {
+    max-width: 100%;
 }
 
 .page-title {

@@ -13,8 +13,7 @@
         <meta name="og:description" content="Hacker.Percussionist.Runner.">
         <meta name="og:image" content="http://www.gravatar.com/avatar/fdb853675eec6e5613781f299d287085.png">
 
-        <link rel="stylesheet" href="/static/css/skeleton/skeleton.css">
-        <link rel="stylesheet" href="/static/css/skeleton/layout.css">
+        <link rel="stylesheet" href="/static/css/fluidable-min.css">
 
         <link rel="stylesheet" media="screen" href="/static/css/style.css">
         <link rel="stylesheet" href="/static/css/responsive-nav.css">
@@ -28,26 +27,56 @@
   </head>
   <body>
       <div class="container">
-        <div id="nav" class="nav-collapse sixteen columns">
-          <ul>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="sixteen columns page-title">
-          <span>{{ name }}</span>
-        </div>
-
-        <div class="sixteen columns content">
-          <div class="three columns offset-by-one alpha">
-            <img src="/static/img/me.jpg">
-          </div>
-          <div class="eight columns omega" style="background-color:red">
+        <div class="col-group">
+          <div class="col-2"><a href="/">Dustin Shahidehpour</a></div>
+          <div id="nav" class="nav-collapse">
+            <ul>
+              <li><div class="col-1"><a href="/blog">Blog</a></div></li>
+              <li><div class="col-1"><a href="/projects">Projects</a></div></li>
+            </ul>
           </div>
         </div>
       </div>
+
+      <section class="page-title">
+        <div class="container">
+          <span>{{ name }}</span>
+        </div>
+      </section>
+
+
+      <div class="container">
+        <div class="col-group">
+          <section class="col-16">
+            {% block content %}
+            {% endblock %}
+          </section>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container">
+          <a class="contact" href="https://www.facebook.com/dustin.shahidehpour">
+              <i class="icon-facebook-sign icon-4x"></i>
+          </a>
+
+          <a class="contact" href="mailto:dshahidehpour@gmail.com">
+              <i class="icon-envelope icon-4x"></i>
+          </a>
+
+          <a class="contact" href="http://www.linkedin.com/pub/dustin-shahidehpour/3b/7a5/a08">
+              <i class="icon-linkedin-sign icon-4x"></i>
+          </a>
+
+          <a class="contact" href="https://github.com/dshahidehpour">
+              <i class="icon-github-sign icon-4x"></i>
+          </a>
+
+          <a class="contact" href="http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x5F69F8DECBEAA003">
+              <i class="icon-certificate icon-4x"></i>
+          </a>
+        </div>
+      </footer>
 
       <!-- jQuery  -->
       <script src="//code.jquery.com/jquery.js"></script>
